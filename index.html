@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ListenUp - Home</title>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="homePage.css" />
+
+  <!-- Bootstrap (optional for fonts/layout helpers) -->
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="homepage-wrapper container-fluid" id="home-page">
+    <!-- TOP BAR -->
+    <div class="top-desk">
+      <div class="top-bar d-flex flex-row justify-content-between align-items-center">
+
+        <div class="nav-left d-flex align-items-center">
+          <div class="logo-listenup mr-3"><strong>🎧 ListenUp</strong></div>
+
+          <!-- Home icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+               fill="white" class="bi bi-house mr-3" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+          </svg>
+          <div class="d-flex flex-row">
+          <!-- Search bar -->
+          <div class="search-bar">
+            <span class="icon-left">🔍</span>
+            <input type="text" placeholder="What do you want to play?" />
+            <span class="icon-right">🗃</span>
+          </div>
+        </div>
+
+        <!-- RIGHT NAV -->
+        <div class="nav-right d-flex align-items-center">
+          <a href="premium.html">Premium</a>
+          <a href="#">Support</a>
+          <a href="#">Download</a>
+          <div class="divider"></div>
+          <span class="text-white mr-3">⬇ Install App</span>
+          <a href="signup.html" class="mr-3">SignUp</a>
+          <button class="login-btn" onclick="location.href='login.html'">Log in</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="main-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-header mt-5">
+          <h2 class="sidebar-title text-white">Your Library</h2>
+          <button class="add-btn" title="Add to Library">+</button>
+        </div>
+
+        <div class="playlist-box">
+          <h3 class="text-white">Create your first playlist</h3>
+          <p class="text-white">It's easy, we'll help you</p>
+          <button class="create-btn">Create playlist</button>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="links">
+            <a href="#">Legal</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">About Ads</a>
+            <a href="#">Accessibility</a>
+          </div>
+          <div class="cookies">Cookies</div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="trending-wrapper mt-3">
+        <!-- TRENDING SONGS -->
+        <div class="trending-title-wrapper">
+          <h1 class="trending-title text-white m-0">Trending songs</h1>
+          <a href="moreSongs.html" class="more-link">More</a>
+        </div>
+
+        <div class="songs-grid">
+          <div class="song-card">
+            <img src="https://www.yashrajfilms.com/images/default-source/news1/saiyaara-poster.jpeg?sfvrsn=254cdecc_1"
+                 alt="Saiyaara" class="cover-image" />
+            <button class="play-button">▶</button>
+            <div class="song-info">
+              <p class="song-title text-white">Saiyaara (Hindi)</p>
+              <p class="song-artist">Tanishk Bagchi, Faheem Abdullah</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <img src="https://c.saavncdn.com/942/Adhi-Dha-Surprisu-From-Robinhood-Telugu-2025-20250310141902-500x500.jpg"
+                 alt="Adhi Dha Surprisu" class="cover-image" />
+            <button class="play-button">▶</button>
+            <div class="song-info">
+              <p class="song-title text-white">Adhi Dha Surprisu (Telugu)</p>
+              <p class="song-artist">G.V. Prakash Kumar, Neeti Mohan</p>
+            </div>
+          </div> 
+
+          <div class="song-card">
+            <img src="https://c.saavncdn.com/934/Golden-Sparrow-From-Nilavuku-En-Mel-Ennadi-Kobam-Tamil-2024-20250328193259-500x500.jpg"
+                 alt="Golden Sparrow" class="cover-image" />
+            <button class="play-button">▶</button>
+            <div class="song-info">
+              <p class="song-title text-white">Golden Sparrow (Telugu)</p>
+              <p class="song-artist">Rambabu Gosala, G.V. Prakash Kumar</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/da/c3/f5/dac3f577-83f5-3c38-a4ad-719ede5ef845/cover.jpg/800x800cc.jpg"
+                 alt="Zindagi" class="cover-image" />
+            <button class="play-button">▶</button>
+            <div class="song-info">
+              <p class="song-title text-white">Zindagi (Telugu)</p>
+              <p class="song-artist">Gopi Sunder</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- POPULAR ARTISTS -->
+        <div class="popular-artists-section">
+          <div class="trending-title-wrapper">
+            <h2 class="text-white m-0">Popular artists</h2>
+            <a href="artistPage.html" class="more-link">More</a>
+          </div>
+
+          <div class="artist-list">
+            <div class="artist-card">
+              <img src="https://i.scdn.co/image/ab67616d0000b273484ee09302be167c44352f18"
+                   alt="DSP" />
+              <div class="play-button" onclick="goToArtist('dsp')">▶</div>
+              <p class="name text-white">DSP</p>
+              <p class="label">Artist</p>
+            </div>
+
+            <div class="artist-card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/AR_Rahman_At_The_%E2%80%98Marvel_Anthem%E2%80%99_Launch_%283x4_cropped%29.jpg"
+                   alt="A.R. Rahman" />
+              <div class="play-button" onclick="goToArtist('arrahman')">▶</div>
+              <p class="name text-white">A.R. Rahman</p>
+              <p class="label">Artist</p>
+            </div>
+
+            <div class="artist-card">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNEeqHk-mtBE3H4RQ3ozzXZ9bbgoyBprUs2Q&s"
+                   alt="Arijit Singh" />
+              <div class="play-button" onclick="goToArtist('arijit')">▶</div>
+              <p class="name text-white">Arijit Singh</p>
+              <p class="label">Artist</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- POPULAR (SECOND ROW) -->
+        <div class="trending-title-wrapper">
+          <h1 class="trending-title text-white m-0">Popular</h1>
+          <a href="moreSongs.html" class="more-link">More</a>
+        </div>
+
+        <div class="songs-grid">
+          <div class="song-card">
+            <img src="https://c.saavncdn.com/160/A-Little-More-English-2025-20250806143753-500x500.jpg"
+                 alt="A Little More" class="cover-image" />
+            <button class="play-button">▶</button>
+            <div class="song-info">
+              <p class="song-title text-white">A Little More (English)</p>
+              <p class="song-artist">Ed Sheeran</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c1bdbad036a7c01bdc63be9cb"
+                 alt="Firestorm" class="cover-image" />
+            <button class="play-button">▶</button>
+            <div class="song-info">
+              <p class="song-title text-white">Firestorm (OG)</p>
+              <p class="song-artist">Thaman S, STR, Raja Kumari</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <img src="https://cdn.telugu.gulte.com/wp-content/uploads/2025/07/hridayam-Lopala-kingdom.jpg"
+                 alt="Hridayam Lopala" class="cover-image" />
+            <button class="play-button">▶</button>
+            <div class="song-info">
+              <p class="song-title text-white">Hridayam Lopala (Telugu)</p>
+              <p class="song-artist">Anirudh, Anumita Nadesan</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGY6pxGnzsqw8-_l_XADMizQ72O-vdZH8z6g&s"
+                 alt="Aradhya" class="cover-image" />
+            <button class="play-button">▶</button>
+            <div class="song-info">
+              <p class="song-title text-white">Aradhya (Telugu)</p>
+              <p class="song-artist">Hesham Wahab, Sid Sriram, Chinmayi</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+<script>
+    function goToArtist(artistId) {
+      window.location.href = `artist.html?name=${artistId}`;
+    }
+  </script>
+  
+</body>
+</html>

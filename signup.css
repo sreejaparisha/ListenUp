@@ -1,0 +1,93 @@
+body {
+  background: #0d0d0d;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  text-align: center;
+}
+
+.logo-icon {
+  font-size: 48px; /* Increase size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  margin: 10px 0 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+input[type="email"] {
+  padding: 15px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.phone-link {
+  color: #1db954;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.next-btn {
+  background: #1db954;
+  color: black;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 999px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.divider {
+  margin: 30px 0;
+  width: 300px;
+  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+.divider span {
+  background: #0d0d0d;
+  padding: 0 10px;
+  position: relative;
+  top: 12px;
+}
+
+.back-link {
+  color: #1db954;
+  text-decoration: none;
+  font-size: 16px;
+}

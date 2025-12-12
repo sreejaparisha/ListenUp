@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  width: 400px;
+  text-align: center;
+}
+
+.logo-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.social-buttons .btn {
+  width: 100%;
+  padding: 15px;
+  margin: 8px 0;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  background: #121212;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.social-buttons .google::before {
+  content: '🌐 ';
+}
+.social-buttons .facebook::before {
+  content: '📘 ';
+}
+.social-buttons .apple::before {
+  content: '🍎 ';
+}
+.social-buttons .phone::before {
+  content: '📱 ';
+}
+
+.divider {
+  margin: 30px 0;
+  border: 0.5px solid #2a2a2a;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.continue-btn {
+  width: 100%;
+  background-color: #1ed760;
+  color: black;
+  padding: 14px;
+  border: none;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.back-link {
+  margin-top: 20px;
+}
+.back-link a {
+  color: #1ed760;
+  text-decoration: none;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist_Songs</title>
+    <link rel="stylesheet" href="artist_songs.css" />
+</head>
+<body>
+    <div class="top-bar">
+        <!-- Left Side -->
+        <div class="nav-left">
+            <div class="logo-listenup"><strong>🎧 ListenUp</strong></div>
+
+            <!-- Home icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-house" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+            </svg>
+
+            <!-- Search bar -->
+            <div class="search-bar">
+                <span class="icon-left">🔍</span>
+                <input type="text" placeholder="What do you want to play?" />
+                <span class="icon-right">🗃</span>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="nav-right">
+            <a href="premium.html" id="premium-link">Premium</a>
+            <a href="#">Support</a>
+            <a href="#">Download</a>
+            <div class="divider"></div>
+            <span>⬇ Install App</span>
+            <a href="signup.html">SignUp</a>
+            <button onclick="window.location.href='login.html'" class="login-btn">Log in</button>
+        </div>
+    </div>
+    <!-- Popular Artists Section -->
+<section class="artists-section">
+    <div class="d-flex justify-content-between align-items-center trending-title-wrapper">
+  <h2>Popular artists</h2>
+  <a href="index.html" class="back-link">Back</a>
+    </div>
+  <div class="artists-grid">
+    <div class="artist-card">
+      <div class="artist-image">
+        <img src="https://i.scdn.co/image/ab67616d0000b273484ee09302be167c44352f18" alt="Pritam">
+        <button class="play-button">▶</button>
+      </div>
+      <div class="artist-name">Pritam</div>
+      <div class="artist-role">Artist</div>
+    </div>
+
+    <div class="artist-card">
+      <div class="artist-image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/AR_Rahman_At_The_%E2%80%98Marvel_Anthem%E2%80%99_Launch_%283x4_cropped%29.jpg" alt="A.R. Rahman">
+        <button class="play-button">▶</button>
+      </div>
+      <div class="artist-name">A.R. Rahman</div>
+      <div class="artist-role">Artist</div>
+    </div>
+
+    <div class="artist-card">
+      <div class="artist-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNEeqHk-mtBE3H4RQ3ozzXZ9bbgoyBprUs2Q&s" alt="Arijit Singh">
+        <button class="play-button">▶</button>
+      </div>
+      <div class="artist-name">Arijit Singh</div>
+      <div class="artist-role">Artist</div>
+    </div>
+
+    <div class="artist-card">
+      <div class="artist-image">
+        <img src="https://m.media-amazon.com/images/M/MV5BY2JhNWM0YTItNzk2MS00NTRjLWE3ODctMjdlN2RjNWU3NjNiXkEyXkFqcGc@._V1_.jpg" alt="Sachin-Jigar">
+        <button class="play-button">▶</button>
+      </div>
+      <div class="artist-name">Sachin-Jigar</div>
+      <div class="artist-role">Artist</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
