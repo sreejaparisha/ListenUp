@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sign up for your free ListenUp account" />
+  <meta name="theme-color" content="#121212" />
+  
+  <title>Sign Up - ListenUp</title>
+
+  <!-- CSS: Consolidated & Optimized -->
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/auth.css" />
+</head>
+
+<body data-page="signup">
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-logo">🎧</div>
+        <h1 class="auth-title">Sign up to start listening</h1>
+        <p class="auth-subtitle">Create your free account today</p>
+      </div>
+
+      <form class="signup-form" id="signupForm">
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            class="form-input" 
+            placeholder="name@domain.com"
+            required 
+            autocomplete="email"
+          />
+          <p class="form-helper" id="emailHelper"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="fullname" class="form-label">Full Name</label>
+          <input 
+            type="text" 
+            id="fullname" 
+            name="fullname"
+            class="form-input" 
+            placeholder="Your full name"
+            required
+          />
+          <p class="form-helper" id="fullnameHelper"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password"
+            class="form-input" 
+            placeholder="Min. 8 characters"
+            required 
+            minlength="8"
+            autocomplete="new-password"
+          />
+          <p class="form-helper" id="passwordHelper">Must be at least 8 characters</p>
+        </div>
+
+        <button type="submit" class="auth-btn auth-btn-primary">Create Account</button>
+      </form>
+
+      <div class="divider"><span>or</span></div>
+
+      <div class="auth-footer" style="border-top: none;">
+        <p class="auth-footer-text">Already have an account?</p>
+        <a href="login.html" class="auth-footer-link">Sign in here</a>
+      </div>
+
+      <div class="auth-footer">
+        <p style="font-size: var(--font-size-xs); color: var(--text-tertiary); margin: 0;">
+          By signing up, you agree to our Terms and Privacy Policy
+        </p>
+        <a href="../index.html" class="auth-footer-link">← Back</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript: Modular & Optimized -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/responsive.js"></script>
+  <script src="../assets/js/utils.js"></script>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const fullname = document.getElementById('fullname').value;
+      const password = document.getElementById('password').value;
+      
+      let hasError = false;
+
+      // Validate email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        document.getElementById('emailHelper').textContent = 'Please enter a valid email';
+        document.getElementById('emailHelper').classList.add('error');
+        hasError = true;
+      }
+
+      // Validate name
+      if (fullname.trim().length < 2) {
+        document.getElementById('fullnameHelper').textContent = 'Please enter your full name';
+        document.getElementById('fullnameHelper').classList.add('error');
+        hasError = true;
+      }
+
+      // Validate password
+      if (password.length < 8) {
+        document.getElementById('passwordHelper').textContent = 'Password must be at least 8 characters';
+        document.getElementById('passwordHelper').classList.add('error');
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      // Register user
+      ListenUpUtils.notify('✅ Account created! Redirecting...', 'success');
+      
+      const newUser = {
+        email,
+        fullname,
+        createdAt: new Date(),
+        theme: 'dark',
+        premium: false
+      };
+      
+      ListenUpUtils.setStorage('currentUser', newUser);
+      
+      setTimeout(() => {
+        window.location.href = '../pages/index.html';
+      }, 2000);
+    });
+
+    // Clear errors on input
+    ['email', 'fullname', 'password'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => {
+        document.getElementById(id + 'Helper').classList.remove('error');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse more songs on ListenUp" />
+  <meta name="theme-color" content="#121212" />
+  
+  <title>More Songs - ListenUp</title>
+
+  <!-- CSS: Consolidated & Optimized -->
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+</head>
+
+<body data-page="more-songs">
+  <!-- TOP NAVIGATION BAR -->
+  <nav class="top-bar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <span>🎧</span>
+        <span>ListenUp</span>
+      </a>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" style="cursor: pointer; color: var(--text-secondary);">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+      </svg>
+
+      <div class="search-bar">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="What do you want to play?" aria-label="Search songs">
+        <span class="icon">🗃</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="premium.html">Premium</a>
+        <a href="#support">Support</a>
+        <a href="#download">Download</a>
+        <div class="divider"></div>
+        <span>⬇ Install App</span>
+        <a href="signup.html">Sign Up</a>
+      </div>
+
+      <div class="auth-buttons">
+        <button class="login-btn" onclick="location.href='login.html'">Log In</button>
+      </div>
+
+      <button class="hamburger-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">Your Library</h2>
+        <button class="sidebar-icon-btn" title="Add to Library">+</button>
+      </div>
+
+      <div class="playlist-box">
+        <h3>Create your first playlist</h3>
+        <p>It's easy, we'll help you</p>
+        <button class="btn btn-primary create-playlist-btn">Create Playlist</button>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-links">
+          <a href="#legal">Legal</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#cookies">Cookies</a>
+          <a href="#ads">About Ads</a>
+          <a href="#accessibility">Accessibility</a>
+        </div>
+        <div class="sidebar-footer-text">Cookies</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- Page Header -->
+      <div class="section-header" style="margin-bottom: var(--spacing-xl);">
+        <h1 class="section-title">🎵 Trending Songs</h1>
+        <a href="index.html" class="section-link">← Back Home</a>
+      </div>
+
+      <!-- Songs Grid -->
+      <div class="songs-grid">
+        <!-- Song 1 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Saiyaara</p>
+            <p class="song-artist">Tanishk Bagchi, Faheem Abdullah</p>
+          </div>
+        </div>
+
+        <!-- Song 2 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Adhi Dha Surprisu</p>
+            <p class="song-artist">G.V. Prakash Kumar, Neeti Mohan</p>
+          </div>
+        </div>
+
+        <!-- Song 3 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Golden Sparrow</p>
+            <p class="song-artist">Rambabu Gosala, G.V. Prakash Kumar</p>
+          </div>
+        </div>
+
+        <!-- Song 4 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Zindagi</p>
+            <p class="song-artist">Gopi Sunder</p>
+          </div>
+        </div>
+
+        <!-- Song 5 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Monica</p>
+            <p class="song-artist">Anirudh Ravichandran, Asal Kolaar</p>
+          </div>
+        </div>
+
+        <!-- Song 6 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Namo Namo</p>
+            <p class="song-artist">Amit Trivedi</p>
+          </div>
+        </div>
+
+        <!-- Song 7 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Mere Dholna</p>
+            <p class="song-artist">Shreya Ghoshal</p>
+          </div>
+        </div>
+
+        <!-- Song 8 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Ek Hazaaron Mein</p>
+            <p class="song-artist">Arijit Singh</p>
+          </div>
+        </div>
+
+        <!-- Song 9 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Kahaani Aaj Kal Ki</p>
+            <p class="song-artist">A.R. Rahman</p>
+          </div>
+        </div>
+
+        <!-- Song 10 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Dilbaro</p>
+            <p class="song-artist">Harshdeep Kaur</p>
+          </div>
+        </div>
+
+        <!-- Song 11 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Bekhayali</p>
+            <p class="song-artist">Sachet Tandon</p>
+          </div>
+        </div>
+
+        <!-- Song 12 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Badhai Ho</p>
+            <p class="song-artist">Rochak Kohli</p>
+          </div>
+        </div>
+
+        <!-- Song 13 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Raghupati Raghav</p>
+            <p class="song-artist">Vishal Mishra</p>
+          </div>
+        </div>
+
+        <!-- Song 14 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Tum Hi Ho</p>
+            <p class="song-artist">Jubin Nautiyal</p>
+          </div>
+        </div>
+
+        <!-- Song 15 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Chaleya</p>
+            <p class="song-artist">Arijit Singh</p>
+          </div>
+        </div>
+
+        <!-- Song 16 -->
+        <div class="song-card">
+          <div class="song-card-image">
+            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+            <button class="play-button" title="Play song">▶</button>
+          </div>
+          <div class="song-info">
+            <p class="song-title">Padharo Mhaari Desh</p>
+            <p class="song-artist">A.R. Rahman</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div style="text-align: center; margin-top: 80px; margin-bottom: 40px;">
+        <button class="btn btn-secondary" onclick="ListenUpUtils.notify('Loading more songs...', 'info')">Load More Songs</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript: Modular & Optimized -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/responsive.js"></script>
+  <script src="../assets/js/utils.js"></script>
+
+  <script>
+    // Search functionality
+    const searchInput = document.querySelector('.search-bar input');
+    const songCards = document.querySelectorAll('.song-card');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        songCards.forEach(card => {
+          const title = card.querySelector('.song-title').textContent.toLowerCase();
+          const artist = card.querySelector('.song-artist').textContent.toLowerCase();
+          const matches = title.includes(term) || artist.includes(term);
+          card.style.opacity = matches ? '1' : '0.3';
+          card.style.pointerEvents = matches ? 'auto' : 'none';
+        });
+      });
+    }
+
+    // Play button interaction
+    document.querySelectorAll('.play-button').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const songTitle = btn.closest('.song-card').querySelector('.song-title').textContent;
+        const artist = btn.closest('.song-card').querySelector('.song-artist').textContent;
+        ListenUpUtils.notify(`▶ Now playing: ${songTitle}`, 'success', 2000);
+      });
+    });
+  </script>
+</body>
+</html>

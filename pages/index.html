@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ListenUp - Your ultimate music streaming platform" />
+  <meta name="theme-color" content="#121212" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+  <title>ListenUp - Music Streaming Platform</title>
+
+  <!-- CSS: Consolidated & Optimized -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+
+<body data-page="home">
+  <!-- TOP NAVIGATION BAR -->
+  <nav class="top-bar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <span>🎧</span>
+        <span>ListenUp</span>
+      </a>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" style="cursor: pointer; color: var(--text-secondary);">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+      </svg>
+
+      <div class="search-bar">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="What do you want to play?" aria-label="Search songs">
+        <span class="icon">🗃</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="pages/premium.html">Premium</a>
+        <a href="#support">Support</a>
+        <a href="#download">Download</a>
+        <div class="divider"></div>
+        <span>⬇ Install App</span>
+        <a href="pages/signup.html">Sign Up</a>
+      </div>
+
+      <div class="auth-buttons">
+        <button class="login-btn" onclick="location.href='pages/login.html'">Log In</button>
+      </div>
+
+      <button class="hamburger-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">Your Library</h2>
+        <button class="sidebar-icon-btn" title="Add to Library">+</button>
+      </div>
+
+      <div class="playlist-box">
+        <h3>Create your first playlist</h3>
+        <p>It's easy, we'll help you</p>
+        <button class="btn btn-primary create-playlist-btn">Create Playlist</button>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-links">
+          <a href="#legal">Legal</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#cookies">Cookies</a>
+          <a href="#ads">About Ads</a>
+          <a href="#accessibility">Accessibility</a>
+        </div>
+        <div class="sidebar-footer-text">Cookies</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- TRENDING SONGS SECTION -->
+      <section class="featured-section">
+        <div class="section-header">
+          <h1 class="section-title">🔥 Trending Songs</h1>
+          <a href="pages/more-songs.html" class="section-link">View All</a>
+        </div>
+
+        <div class="songs-scroll">
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Saiyaara</p>
+              <p class="song-artist">Tanishk Bagchi, Faheem Abdullah</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Adhi Dha Surprisu</p>
+              <p class="song-artist">G.V. Prakash Kumar, Neeti Mohan</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Golden Sparrow</p>
+              <p class="song-artist">Rambabu Gosala, G.V. Prakash Kumar</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Zindagi</p>
+              <p class="song-artist">Gopi Sunder</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Monica</p>
+              <p class="song-artist">Anirudh Ravichandran, Asal Kolaar</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- POPULAR ARTISTS SECTION -->
+      <section>
+        <div class="section-header">
+          <h2 class="section-title">👥 Popular Artists</h2>
+          <a href="pages/artists.html" class="section-link">View All</a>
+        </div>
+
+        <div class="artists-scroll">
+          <div class="artist-card">
+            <div class="artist-image">
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+              <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+            </div>
+            <p class="artist-name">DSP</p>
+            <p class="artist-role">Artist</p>
+          </div>
+
+          <div class="artist-card">
+            <div class="artist-image">
+              <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+              <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+            </div>
+            <p class="artist-name">A.R. Rahman</p>
+            <p class="artist-role">Artist</p>
+          </div>
+
+          <div class="artist-card">
+            <div class="artist-image">
+              <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+              <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+            </div>
+            <p class="artist-name">Arijit Singh</p>
+            <p class="artist-role">Artist</p>
+          </div>
+
+          <div class="artist-card">
+            <div class="artist-image">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+              <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+            </div>
+            <p class="artist-name">Sachin-Jigar</p>
+            <p class="artist-role">Artist</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW RELEASES SECTION -->
+      <section style="margin-top: 60px;">
+        <div class="section-header">
+          <h2 class="section-title">✨ New Releases</h2>
+          <a href="pages/more-songs.html" class="section-link">See All</a>
+        </div>
+
+        <div class="songs-grid">
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">New Horizon</p>
+              <p class="song-artist">Various Artists</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Summer Vibes</p>
+              <p class="song-artist">DJ Collections</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Midnight Echo</p>
+              <p class="song-artist">Night Artists</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Urban Beats</p>
+              <p class="song-artist">City Sound</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Electric Dreams</p>
+              <p class="song-artist">Electronic Collective</p>
+            </div>
+          </div>
+
+          <div class="song-card">
+            <div class="song-card-image">
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Song cover" loading="lazy">
+              <button class="play-button" title="Play song">▶</button>
+            </div>
+            <div class="song-info">
+              <p class="song-title">Indie Revival</p>
+              <p class="song-artist">Independent Label</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- JavaScript: Modular & Optimized -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/responsive.js"></script>
+  <script src="assets/js/utils.js"></script>
+
+  <script>
+    // Page initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('✅ ListenUp loaded with optimized architecture');
+      console.log('Theme:', window.themeManager.getAppliedTheme());
+      console.log('Device:', window.responsiveManager.getDeviceInfo());
+    });
+  </script>
+</body>
+</html>

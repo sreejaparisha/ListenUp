@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore popular artists on ListenUp" />
+  <meta name="theme-color" content="#121212" />
+  
+  <title>Popular Artists - ListenUp</title>
+
+  <!-- CSS: Consolidated & Optimized -->
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+</head>
+
+<body data-page="artists">
+  <!-- TOP NAVIGATION BAR -->
+  <nav class="top-bar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <span>🎧</span>
+        <span>ListenUp</span>
+      </a>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" style="cursor: pointer; color: var(--text-secondary);">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+      </svg>
+
+      <div class="search-bar">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="Search artists..." aria-label="Search artists">
+        <span class="icon">🗃</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="premium.html">Premium</a>
+        <a href="#support">Support</a>
+        <a href="#download">Download</a>
+        <div class="divider"></div>
+        <span>⬇ Install App</span>
+        <a href="signup.html">Sign Up</a>
+      </div>
+
+      <div class="auth-buttons">
+        <button class="login-btn" onclick="location.href='login.html'">Log In</button>
+      </div>
+
+      <button class="hamburger-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">Your Library</h2>
+        <button class="sidebar-icon-btn" title="Add to Library">+</button>
+      </div>
+
+      <div class="playlist-box">
+        <h3>Create your first playlist</h3>
+        <p>It's easy, we'll help you</p>
+        <button class="btn btn-primary create-playlist-btn">Create Playlist</button>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-links">
+          <a href="#legal">Legal</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#cookies">Cookies</a>
+          <a href="#ads">About Ads</a>
+          <a href="#accessibility">Accessibility</a>
+        </div>
+        <div class="sidebar-footer-text">Cookies</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- Page Header -->
+      <div class="section-header" style="margin-bottom: var(--spacing-xl);">
+        <h1 class="section-title">👥 Popular Artists</h1>
+        <a href="index.html" class="section-link">← Back Home</a>
+      </div>
+
+      <!-- Artists Grid -->
+      <div class="artists-grid">
+        <!-- Artist 1 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=160&h=160&fit=crop" alt="Artist DSP" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">DSP</p>
+          <p class="artist-role">Film Composer</p>
+        </div>
+
+        <!-- Artist 2 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=160&h=160&fit=crop" alt="Artist A.R. Rahman" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">A.R. Rahman</p>
+          <p class="artist-role">Composer & Singer</p>
+        </div>
+
+        <!-- Artist 3 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=160&h=160&fit=crop" alt="Artist Arijit Singh" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Arijit Singh</p>
+          <p class="artist-role">Playback Singer</p>
+        </div>
+
+        <!-- Artist 4 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=160&h=160&fit=crop" alt="Artist Sachin-Jigar" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Sachin-Jigar</p>
+          <p class="artist-role">Music Composer Duo</p>
+        </div>
+
+        <!-- Artist 5 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Pritam</p>
+          <p class="artist-role">Music Composer</p>
+        </div>
+
+        <!-- Artist 6 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Anirudh Ravichandran</p>
+          <p class="artist-role">Composer & Singer</p>
+        </div>
+
+        <!-- Artist 7 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">S. Thaman</p>
+          <p class="artist-role">Music Director</p>
+        </div>
+
+        <!-- Artist 8 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Harris Jayaraj</p>
+          <p class="artist-role">Film Composer</p>
+        </div>
+
+        <!-- Artist 9 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Gopi Sunder</p>
+          <p class="artist-role">Composer</p>
+        </div>
+
+        <!-- Artist 10 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Tanishk Bagchi</p>
+          <p class="artist-role">Music Composer</p>
+        </div>
+
+        <!-- Artist 11 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Vishal Shekhar</p>
+          <p class="artist-role">Composer Duo</p>
+        </div>
+
+        <!-- Artist 12 -->
+        <div class="artist-card">
+          <div class="artist-image">
+            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=160&h=160&fit=crop" alt="Artist" loading="lazy">
+            <button class="artist-play-btn" title="Play artist"><span>▶</span></button>
+          </div>
+          <p class="artist-name">Mani Osai</p>
+          <p class="artist-role">Music Producer</p>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div style="text-align: center; margin-top: 80px; margin-bottom: 40px;">
+        <button class="btn btn-secondary" onclick="ListenUpUtils.notify('Loading more artists...', 'info')">Load More Artists</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript: Modular & Optimized -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/responsive.js"></script>
+  <script src="../assets/js/utils.js"></script>
+
+  <script>
+    // Search functionality
+    const searchInput = document.querySelector('.search-bar input');
+    const artistCards = document.querySelectorAll('.artist-card');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        artistCards.forEach(card => {
+          const name = card.querySelector('.artist-name').textContent.toLowerCase();
+          card.style.opacity = name.includes(term) ? '1' : '0.3';
+          card.style.pointerEvents = name.includes(term) ? 'auto' : 'none';
+        });
+      });
+    }
+
+    // Play button interaction
+    document.querySelectorAll('.artist-play-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const artistName = btn.closest('.artist-card').querySelector('.artist-name').textContent;
+        ListenUpUtils.notify(`▶ Now playing ${artistName}`, 'success', 2000);
+      });
+    });
+  </script>
+</body>
+</html>

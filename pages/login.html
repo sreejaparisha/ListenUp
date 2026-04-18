@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to your ListenUp account" />
+  <meta name="theme-color" content="#121212" />
+  
+  <title>Log In - ListenUp</title>
+
+  <!-- CSS: Consolidated & Optimized -->
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/auth.css" />
+</head>
+
+<body data-page="login">
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-logo">🎧</div>
+        <h1 class="auth-title">Log in to ListenUp</h1>
+      </div>
+
+      <div class="social-buttons">
+        <button class="social-btn google" type="button">
+          <span class="icon">🌐</span>
+          Continue with Google
+        </button>
+        <button class="social-btn apple" type="button">
+          <span class="icon">🍎</span>
+          Continue with Apple
+        </button>
+        <button class="social-btn facebook" type="button">
+          <span class="icon">📘</span>
+          Continue with Facebook
+        </button>
+        <button class="social-btn phone" type="button">
+          <span class="icon">📱</span>
+          Continue with Phone
+        </button>
+      </div>
+
+      <div class="divider"><span>or</span></div>
+
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="email" class="form-label">Email or Username</label>
+          <input 
+            type="text" 
+            id="email" 
+            name="email"
+            class="form-input" 
+            placeholder="Enter your email or username"
+            required 
+            autocomplete="username"
+          />
+          <p class="form-helper" id="emailHelper"></p>
+        </div>
+
+        <button type="submit" class="auth-btn auth-btn-primary">Continue</button>
+      </form>
+
+      <div class="auth-footer">
+        <p class="auth-footer-text">Don't have an account?</p>
+        <a href="signup.html" class="auth-footer-link">Sign up for free</a>
+      </div>
+
+      <div class="auth-footer" style="border-top: none; border-top: 1px solid var(--border-color); margin-top: auto;">
+        <a href="../index.html" class="auth-footer-link">← Back</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript: Modular & Optimized -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/responsive.js"></script>
+  <script src="../assets/js/utils.js"></script>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      
+      if (!email) {
+        document.getElementById('emailHelper').textContent = 'Please enter your email or username';
+        document.getElementById('emailHelper').classList.add('error');
+        return;
+      }
+
+      // Simulate login
+      ListenUpUtils.notify('✅ Logging in...', 'info');
+      
+      // Store credentials
+      ListenUpUtils.setStorage('currentUser', { email, loginTime: new Date() });
+      
+      setTimeout(() => {
+        window.location.href = '../pages/index.html';
+      }, 1500);
+    });
+
+    document.getElementById('email').addEventListener('input', () => {
+      document.getElementById('emailHelper').textContent = '';
+      document.getElementById('emailHelper').classList.remove('error');
+    });
+  </script>
+</body>
+</html>
