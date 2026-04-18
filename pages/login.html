@@ -3,106 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Login to your ListenUp account" />
-  <meta name="theme-color" content="#121212" />
+  <meta name="description" content="Log in to ListenUp" />
+  <meta name="theme-color" content="#0a0a0a" />
   
   <title>Log In - ListenUp</title>
 
-  <!-- CSS: Consolidated & Optimized -->
   <link rel="stylesheet" href="../assets/css/variables.css" />
   <link rel="stylesheet" href="../assets/css/base.css" />
   <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
   <link rel="stylesheet" href="../assets/css/auth.css" />
 </head>
 
 <body data-page="login">
-  <div class="auth-container">
-    <div class="auth-card">
-      <div class="auth-header">
-        <div class="auth-logo">🎧</div>
-        <h1 class="auth-title">Log in to ListenUp</h1>
-      </div>
+  <!-- NAVIGATION BAR -->
+  <nav class="top-bar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <span>🎧</span>
+        <span>ListenUp</span>
+      </a>
+    </div>
 
-      <div class="social-buttons">
-        <button class="social-btn google" type="button">
-          <span class="icon">🌐</span>
-          Continue with Google
-        </button>
-        <button class="social-btn apple" type="button">
-          <span class="icon">🍎</span>
-          Continue with Apple
-        </button>
-        <button class="social-btn facebook" type="button">
-          <span class="icon">📘</span>
-          Continue with Facebook
-        </button>
-        <button class="social-btn phone" type="button">
-          <span class="icon">📱</span>
-          Continue with Phone
-        </button>
-      </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
+    </div>
+  </nav>
 
-      <div class="divider"><span>or</span></div>
-
-      <form class="login-form" id="loginForm">
-        <div class="form-group">
-          <label for="email" class="form-label">Email or Username</label>
-          <input 
-            type="text" 
-            id="email" 
-            name="email"
-            class="form-input" 
-            placeholder="Enter your email or username"
-            required 
-            autocomplete="username"
-          />
-          <p class="form-helper" id="emailHelper"></p>
+  <!-- MAIN CONTENT -->
+  <main class="main-layout">
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>Welcome Back</h1>
+          <p>Log in to continue listening</p>
         </div>
 
-        <button type="submit" class="auth-btn auth-btn-primary">Continue</button>
-      </form>
+        <form class="auth-form" id="login-form">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
 
-      <div class="auth-footer">
-        <p class="auth-footer-text">Don't have an account?</p>
-        <a href="signup.html" class="auth-footer-link">Sign up for free</a>
-      </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" required />
+          </div>
 
-      <div class="auth-footer" style="border-top: none; border-top: 1px solid var(--border-color); margin-top: auto;">
-        <a href="../index.html" class="auth-footer-link">← Back</a>
+          <div class="form-group checkbox">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Remember me</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: var(--font-size-md); padding: 12px 24px;">Log In</button>
+        </form>
+
+        <div class="auth-divider">or continue with</div>
+
+        <div class="social-buttons">
+          <button class="social-btn google" type="button">Google</button>
+          <button class="social-btn apple" type="button">Apple</button>
+        </div>
+
+        <div class="auth-footer">
+          <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+          <p><a href="#">Forgot your password?</a></p>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <!-- JavaScript: Modular & Optimized -->
   <script src="../assets/js/theme.js"></script>
-  <script src="../assets/js/responsive.js"></script>
   <script src="../assets/js/utils.js"></script>
-
   <script>
-    document.getElementById('loginForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      
-      if (!email) {
-        document.getElementById('emailHelper').textContent = 'Please enter your email or username';
-        document.getElementById('emailHelper').classList.add('error');
-        return;
-      }
-
-      // Simulate login
-      ListenUpUtils.notify('✅ Logging in...', 'info');
-      
-      // Store credentials
-      ListenUpUtils.setStorage('currentUser', { email, loginTime: new Date() });
-      
-      setTimeout(() => {
-        window.location.href = '../pages/index.html';
-      }, 1500);
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeManager = new ThemeManager();
+    
+    themeToggle.addEventListener('click', () => {
+      const themes = ['dark', 'light', 'high-contrast'];
+      const current = themeManager.getTheme();
+      const next = themes[(themes.indexOf(current) + 1) % themes.length];
+      themeManager.setTheme(next);
+      updateThemeToggleIcon();
     });
 
-    document.getElementById('email').addEventListener('input', () => {
-      document.getElementById('emailHelper').textContent = '';
-      document.getElementById('emailHelper').classList.remove('error');
+    function updateThemeToggleIcon() {
+      const current = themeManager.getTheme();
+      const icons = { dark: '🌙', light: '☀️', 'high-contrast': '♿' };
+      themeToggle.textContent = icons[current] || '🌙';
+    }
+
+    updateThemeToggleIcon();
+
+    // Form submission
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      ListenUpUtils.notify('✅ Logging in...', 'info');
+      ListenUpUtils.setStorage('currentUser', { email, loginTime: new Date() });
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1500);
     });
   </script>
 </body>

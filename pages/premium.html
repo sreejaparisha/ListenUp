@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Upgrade to ListenUp Premium - Ad-free music, offline listening, and more" />
-  <meta name="theme-color" content="#121212" />
+  <meta name="description" content="Premium Plans - ListenUp" />
+  <meta name="theme-color" content="#0a0a0a" />
   
   <title>Premium Plans - ListenUp</title>
 
-  <!-- CSS: Consolidated & Optimized -->
   <link rel="stylesheet" href="../assets/css/variables.css" />
   <link rel="stylesheet" href="../assets/css/base.css" />
   <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/hero.css" />
   <link rel="stylesheet" href="../assets/css/premium.css" />
 </head>
 
 <body data-page="premium">
-  <!-- TOP NAVIGATION BAR -->
+  <!-- NAVIGATION BAR -->
   <nav class="top-bar">
     <div class="nav-left">
-      <a href="../pages/index.html" class="logo">
+      <a href="index.html" class="logo">
         <span>🎧</span>
         <span>ListenUp</span>
       </a>
@@ -29,415 +29,262 @@
     <div class="nav-right">
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="#support">Support</a>
+        <a href="#plans">Plans</a>
         <a href="#faq">FAQ</a>
       </div>
-
-      <div class="auth-buttons">
-        <a href="login.html" class="login-btn">Log In</a>
-      </div>
-
-      <button class="hamburger-btn" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      
+      <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
+      <a href="login.html" class="login-btn">Log In</a>
     </div>
   </nav>
 
   <!-- MAIN CONTENT -->
-  <div class="main-layout" style="margin-left: 0; margin-top: 70px;">
-    <main class="main-content" style="max-width: 1200px; margin: 0 auto;">
-      <!-- HERO SECTION -->
-      <section class="premium-hero">
-        <h1>🎵 Experience Music Without Limits</h1>
-        <p>Upgrade to Premium and enjoy ad-free listening, offline downloads, and more</p>
-        <div class="premium-cta-buttons">
-          <a href="signup.html" class="btn btn-primary">Start Your Free Trial</a>
-          <button class="btn btn-secondary" onclick="document.querySelector('.plans-grid').scrollIntoView({behavior: 'smooth'})">View Plans</button>
+  <main class="main-layout">
+    
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Unlimited Music, Zero Ads</h1>
+        <p>Listen to millions of songs ad-free with offline downloads and high-quality audio.</p>
+        <div class="hero-cta">
+          <a href="signup.html" class="btn btn-primary">Start Free Trial</a>
+          <a href="#plans" class="btn btn-secondary">View Plans</a>
         </div>
-        <p style="font-size: var(--font-size-sm); margin-top: var(--spacing-lg);">
-          ✨ 1 month free. Only ₹119/month after. Cancel anytime.
-        </p>
-      </section>
+        <p style="font-size: var(--font-size-sm); color: var(--text-secondary); margin-top: var(--spacing-lg);">1 month free. Then ₹119/month. Cancel anytime.</p>
+      </div>
+    </section>
 
-      <!-- FEATURES SECTION -->
-      <section class="features-section">
-        <h2 class="features-title">Why Go Premium?</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🎵</div>
-            <h3 class="feature-title">Ad-Free Listening</h3>
-            <p class="feature-desc">Enjoy uninterrupted music without ads</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📱</div>
-            <h3 class="feature-title">Offline Downloads</h3>
-            <p class="feature-desc">Download and listen offline anywhere</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎧</div>
-            <h3 class="feature-title">High Quality Audio</h3>
-            <p class="feature-desc">Crystal-clear sound up to 320kbps</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h3 class="feature-title">Share Music</h3>
-            <p class="feature-desc">Listen together with friends in real-time</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h3 class="feature-title">Listening Stats</h3>
-            <p class="feature-desc">Track your listening habits and trends</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎸</div>
-            <h3 class="feature-title">Unlimited Skips</h3>
-            <p class="feature-desc">Skip as many songs as you want</p>
-          </div>
+    <!-- FEATURES SECTION -->
+    <section class="featured-section">
+      <div class="section-heading">
+        <h2>Why Choose Premium?</h2>
+        <p>Everything you need for the ultimate music experience</p>
+      </div>
+
+      <div class="featured-grid">
+        <div class="featured-card">
+          <div class="featured-card-icon">🎵</div>
+          <h3>Ad-Free Listening</h3>
+          <p>Enjoy uninterrupted music without any ads</p>
         </div>
-      </section>
-
-      <!-- PRICING PLANS SECTION -->
-      <section class="pricing-section">
-        <h2 class="pricing-title">Choose Your Plan</h2>
-        <p class="pricing-subtitle">Pay only for what you need. Cancel anytime.</p>
-
-        <div class="plans-grid">
-          <!-- Individual Plan -->
-          <div class="plan-card featured">
-            <div class="plan-badge">Most Popular</div>
-            <h2 class="plan-name">Individual</h2>
-            <p class="plan-price"><span class="plan-currency">₹</span>119<span style="font-size: 16px; color: var(--text-secondary);">/month</span></p>
-            <p class="plan-period">1 month free for new users</p>
-            <ul class="plan-features">
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>1 Premium account</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Ad-free listening</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Download to listen offline</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Play songs in any order</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>High audio quality</span>
-              </li>
-            </ul>
-            <button class="plan-cta" onclick="handlePremium('individual')">Get Individual Plan</button>
-            <p class="plan-terms">₹119/month after trial. Cancel anytime.</p>
-          </div>
-
-          <!-- Family Plan -->
-          <div class="plan-card">
-            <div class="plan-badge">Save 15%</div>
-            <h2 class="plan-name">Family</h2>
-            <p class="plan-price"><span class="plan-currency">₹</span>179<span style="font-size: 16px; color: var(--text-secondary);">/month</span></p>
-            <p class="plan-period">Up to 6 family members</p>
-            <ul class="plan-features">
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Up to 6 accounts</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>All Individual features</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Parental controls</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Block explicit content</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Family activity feed</span>
-              </li>
-            </ul>
-            <button class="plan-cta" onclick="handlePremium('family')">Get Family Plan</button>
-            <p class="plan-terms">Perfect for households. Manage up to 6 accounts.</p>
-          </div>
-
-          <!-- Duo Plan -->
-          <div class="plan-card">
-            <div class="plan-badge">Save 20%</div>
-            <h2 class="plan-name">Duo</h2>
-            <p class="plan-price"><span class="plan-currency">₹</span>149<span style="font-size: 16px; color: var(--text-secondary);">/month</span></p>
-            <p class="plan-period">For 2 people</p>
-            <ul class="plan-features">
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>2 Premium accounts</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>All Individual features</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Shared listening sessions</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Dual Playlist feature</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Same address requirement</span>
-              </li>
-            </ul>
-            <button class="plan-cta" onclick="handlePremium('duo')">Get Duo Plan</button>
-            <p class="plan-terms">For couples living at the same address.</p>
-          </div>
-
-          <!-- Student Plan -->
-          <div class="plan-card">
-            <div class="plan-badge">Student Discount</div>
-            <h2 class="plan-name">Student</h2>
-            <p class="plan-price"><span class="plan-currency">₹</span>59<span style="font-size: 16px; color: var(--text-secondary);">/month</span></p>
-            <p class="plan-period">50% off for students</p>
-            <ul class="plan-features">
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>1 verified Premium account</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>All Individual features</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Exclusive student content</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>50% student discount</span>
-              </li>
-              <li class="plan-feature">
-                <span class="plan-feature-icon">✓</span>
-                <span>Valid student ID required</span>
-              </li>
-            </ul>
-            <button class="plan-cta" onclick="handlePremium('student')">Verify & Get Student Plan</button>
-            <p class="plan-terms">Valid only for accredited students with active email.</p>
-          </div>
+        
+        <div class="featured-card">
+          <div class="featured-card-icon">📱</div>
+          <h3>Offline Downloads</h3>
+          <p>Download and listen offline anywhere, anytime</p>
         </div>
-      </section>
 
-      <!-- COMPARISON TABLE -->
-      <section class="comparison-section">
-        <h2 class="comparison-title">Compare Plans</h2>
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Free</th>
-              <th>Individual</th>
-              <th>Family</th>
-              <th>Duo</th>
-              <th>Student</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="feature-name">Ad-free listening</td>
-              <td class="x">—</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Offline downloads</td>
-              <td class="x">—</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-            </tr>
-            <tr>
-              <td class="feature-name">High quality audio</td>
-              <td class="x">—</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Unlimited skips</td>
-              <td class="x">—</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Number of accounts</td>
-              <td>1</td>
-              <td>1</td>
-              <td>6</td>
-              <td>2</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Family controls</td>
-              <td class="x">—</td>
-              <td class="x">—</td>
-              <td class="check">✓</td>
-              <td class="x">—</td>
-              <td class="x">—</td>
-            </tr>
-            <tr>
-              <td class="feature-name">Listening insights</td>
-              <td class="x">—</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-              <td class="check">✓</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <!-- PAYMENT METHODS -->
-      <section class="payment-section">
-        <h3 class="payment-title">Multiple Payment Options</h3>
-        <div class="payment-methods">
-          <div class="payment-method" title="BHIM UPI">
-            <span>🏦</span>
-          </div>
-          <div class="payment-method" title="Google Pay">
-            <span>🔵</span>
-          </div>
-          <div class="payment-method" title="PhonePe">
-            <span>📱</span>
-          </div>
-          <div class="payment-method" title="Paytm">
-            <span>💳</span>
-          </div>
-          <div class="payment-method" title="Credit Card">
-            <span>💳</span>
-          </div>
-          <div class="payment-method" title="Debit Card">
-            <span>🏧</span>
-          </div>
+        <div class="featured-card">
+          <div class="featured-card-icon">🎧</div>
+          <h3>High Quality Audio</h3>
+          <p>Experience crystal-clear sound up to 320kbps</p>
         </div>
-      </section>
 
-      <!-- FAQ SECTION -->
-      <section class="faq-section" id="faq">
-        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="featured-card">
+          <div class="featured-card-icon">⏭️</div>
+          <h3>Unlimited Skips</h3>
+          <p>Skip as many songs as you want</p>
+        </div>
 
+        <div class="featured-card">
+          <div class="featured-card-icon">🔁</div>
+          <h3>Play Any Song</h3>
+          <p>Play any song on demand in any order</p>
+        </div>
+
+        <div class="featured-card">
+          <div class="featured-card-icon">👥</div>
+          <h3>Family Sharing</h3>
+          <p>Share your plan with up to 6 family members</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="plans" class="featured-section">
+      <div class="section-heading">
+        <h2>Choose Your Plan</h2>
+        <p>Pick the right plan for you</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Free Plan -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Free</h3>
+            <p class="pricing-price"><span>₹</span>0</p>
+          </div>
+          
+          <ul class="pricing-features">
+            <li><span>✓</span> Ad-supported listening</li>
+            <li><span>✓</span> Standard quality audio</li>
+            <li><span>✓</span> Create playlists</li>
+            <li><span>✗</span> Offline downloads</li>
+            <li><span>✗</span> Unlimited skips</li>
+          </ul>
+          
+          <a href="signup.html" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-lg);">Get Started</a>
+        </div>
+
+        <!-- Individual Plan -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-header">
+            <h3>Individual</h3>
+            <p class="pricing-price"><span>₹</span>119<span>/month</span></p>
+          </div>
+          
+          <ul class="pricing-features">
+            <li><span>✓</span> 1 Premium account</li>
+            <li><span>✓</span> Ad-free listening</li>
+            <li><span>✓</span> Offline downloads</li>
+            <li><span>✓</span> High quality audio</li>
+            <li><span>✓</span> Unlimited skips</li>
+          </ul>
+          
+          <a href="signup.html" class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-lg);">Start Free Trial</a>
+          <p style="font-size: var(--font-size-xs); color: var(--text-secondary); text-align: center; margin-top: var(--spacing-md);">1 month free. Cancel anytime.</p>
+        </div>
+
+        <!-- Family Plan -->
+        <div class="pricing-card">
+          <div class="pricing-badge">Save 15%</div>
+          <div class="pricing-header">
+            <h3>Family</h3>
+            <p class="pricing-price"><span>₹</span>179<span>/month</span></p>
+          </div>
+          
+          <ul class="pricing-features">
+            <li><span>✓</span> Up to 6 accounts</li>
+            <li><span>✓</span> Ad-free listening</li>
+            <li><span>✓</span> Offline downloads</li>
+            <li><span>✓</span> Family Mix playlist</li>
+            <li><span>✓</span> Unlimited skips</li>
+          </ul>
+          
+          <a href="signup.html" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-lg);">Choose Plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="featured-section">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-grid">
         <div class="faq-item">
-          <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            How does the free trial work?
-            <span class="faq-caret">▼</span>
+          <div class="faq-question">
+            <h4>Can I cancel my subscription anytime?</h4>
+            <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
-            The free trial gives you full access to all Premium features for 1 month. No credit card required for new users. After the trial ends, your subscription will automatically continue at the regular monthly rate.
+            <p>Yes, you can cancel your subscription anytime without any penalties. Your access will continue until the end of your billing period.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            Can I cancel my subscription anytime?
-            <span class="faq-caret">▼</span>
+          <div class="faq-question">
+            <h4>Can I upgrade or downgrade my plan?</h4>
+            <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
-            Yes! You can cancel your Premium subscription anytime from your account settings. Your access will continue until your current billing cycle ends. No hidden fees or long-term commitments.
+            <p>Yes, you can change your plan at any time. The price difference will be adjusted in your next billing cycle.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            What's the difference between Individual and Family plans?
-            <span class="faq-caret">▼</span>
+          <div class="faq-question">
+            <h4>Do I get a free trial?</h4>
+            <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
-            Individual plan is for one person. Family plan is for up to 6 family members living at the same address. Family plan includes parental controls and a shared family activity feed.
+            <p>Yes! Individual plans come with 1 month free for new users. Family plans also include a free trial period.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            Do I need to use my own payment method or can I use a gift card?
-            <span class="faq-caret">▼</span>
+          <div class="faq-question">
+            <h4>Can I share my account with others?</h4>
+            <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
-            You can use various payment methods including credit/debit cards, UPI, digital wallets, and more. We also plan to support Premium gift cards in the future.
+            <p>Yes, with the Family plan, you can add up to 6 family members to your account. Each member gets their own personalized experience.</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            Is the Student plan verified?
-            <span class="faq-caret">▼</span>
+          <div class="faq-question">
+            <h4>What payment methods do you accept?</h4>
+            <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">
-            Yes, verification is required for the Student plan. You'll need a valid student ID or current .edu email address to qualify for the 50% discount.
+            <p>We accept all major credit cards, debit cards, UPI, and digital wallets. Your payment information is always secure.</p>
           </div>
         </div>
-      </section>
 
-      <!-- CTA SECTION -->
-      <section style="text-align: center; margin-top: 80px; margin-bottom: 80px; padding: 60px 20px; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); border-radius: var(--radius-lg);">
-        <h2 style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-lg);">Ready to start?</h2>
-        <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-lg); color: var(--text-secondary);">Join millions of listeners enjoying ad-free music</p>
-        <a href="signup.html" class="btn btn-primary" style="padding: 16px 48px; font-size: var(--font-size-md);">Get Started Now</a>
-      </section>
-    </main>
-  </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How many devices can I use?</h4>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>You can use your Premium account on multiple devices, but only play music on one device at a time per account.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- JavaScript: Modular & Optimized -->
+    <!-- FINAL CTA -->
+    <section class="featured-section">
+      <div class="cta-section">
+        <h2>Ready to upgrade?</h2>
+        <p>Start your free trial today and experience premium listening</p>
+        <a href="signup.html" class="cta-button">Start Free Trial Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--separator); padding: var(--spacing-xl) var(--spacing-lg); text-align: center; color: var(--text-secondary);">
+    <p>&copy; 2024 ListenUp Music Streaming. All rights reserved.</p>
+  </footer>
+
   <script src="../assets/js/theme.js"></script>
-  <script src="../assets/js/responsive.js"></script>
   <script src="../assets/js/utils.js"></script>
-
   <script>
-    function handlePremium(plan) {
-      const planNames = {
-        individual: 'Individual (₹119/month)',
-        family: 'Family (₹179/month)',
-        duo: 'Duo (₹149/month)',
-        student: 'Student (₹59/month)'
-      };
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeManager = new ThemeManager();
+    
+    themeToggle.addEventListener('click', () => {
+      const themes = ['dark', 'light', 'high-contrast'];
+      const current = themeManager.getTheme();
+      const next = themes[(themes.indexOf(current) + 1) % themes.length];
+      themeManager.setTheme(next);
+      updateThemeToggleIcon();
+    });
 
-      ListenUpUtils.notify(`✨ Redirecting to ${planNames[plan]} checkout...`, 'success');
-      setTimeout(() => {
-        window.location.href = 'signup.html?plan=' + plan;
-      }, 1500);
+    function updateThemeToggleIcon() {
+      const current = themeManager.getTheme();
+      const icons = { dark: '🌙', light: '☀️', 'high-contrast': '♿' };
+      themeToggle.textContent = icons[current] || '🌙';
     }
 
-    // Add smooth animations
-    document.addEventListener('DOMContentLoaded', () => {
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach((item, index) => {
-        item.style.animation = `fadeInUp 0.5s ease ${index * 0.1}s both`;
+    updateThemeToggleIcon();
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const toggle = question.querySelector('.faq-toggle');
+        
+        item.classList.toggle('active');
+        toggle.textContent = item.classList.contains('active') ? '−' : '+';
       });
     });
   </script>
-
-  <style>
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
 </body>
 </html>

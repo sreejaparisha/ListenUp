@@ -1,29 +1,39 @@
 /* ========================================
    LISTENUP - CSS VARIABLES & THEME SYSTEM
+   APPLE-INSPIRED MODERN DESIGN
    ======================================== */
 
 :root {
-  /* DARK THEME (DEFAULT) */
-  --bg-primary: #121212;
-  --bg-secondary: #1e1e1e;
-  --bg-tertiary: #282828;
-  --bg-elevated: #2a2a2a;
+  /* DARK THEME (DEFAULT) - Apple Inspired */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #262626;
+  --bg-elevated: #323232;
+  --bg-hover: #3a3a3a;
   
   --text-primary: #ffffff;
-  --text-secondary: #b3b3b3;
-  --text-tertiary: #888888;
+  --text-secondary: #a1a1a6;
+  --text-tertiary: #767676;
   
-  --border-color: #333333;
-  --sidebar-bg: #000000;
+  --border-color: #424245;
+  --separator: rgba(255, 255, 255, 0.06);
   
-  --accent-primary: #1db954;
-  --accent-secondary: #1ed760;
-  --accent-hover: #1aa34a;
+  --accent-primary: #ff9500;
+  --accent-secondary: #ffb700;
+  --accent-hover: #ff8c00;
+  --accent-light: #ff9500;
   
-  --card-bg: #222222;
-  --card-hover: #282828;
+  --card-bg: #1a1a1a;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-hover: #262626;
   
-  --shadow: rgba(0, 0, 0, 0.5);
+  --success: #34c759;
+  --warning: #ff9500;
+  --error: #ff3b30;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.6);
   
   /* Spacing */
   --spacing-xs: 4px;
@@ -31,66 +41,91 @@
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
+  --spacing-2xl: 48px;
   
   /* Border radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
   --radius-full: 999px;
   
-  /* Typography */
+  /* Typography - System Font Stack (Apple) */
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --font-family-mono: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  
   --font-size-xs: 12px;
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
+  --font-size-base: 16px;
   --font-size-lg: 18px;
-  --font-size-xl: 24px;
-  --font-size-2xl: 32px;
-  --font-size-3xl: 48px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 28px;
+  --font-size-3xl: 34px;
+  --font-size-4xl: 48px;
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
   
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: all 0.15s ease;
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* LIGHT THEME */
 html[data-theme="light"] {
   --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f5;
-  --bg-tertiary: #eeeeee;
-  --bg-elevated: #e8e8e8;
+  --bg-secondary: #f5f5f7;
+  --bg-tertiary: #ececf1;
+  --bg-elevated: #e5e5ea;
+  --bg-hover: #f2f2f7;
   
   --text-primary: #000000;
-  --text-secondary: #666666;
-  --text-tertiary: #999999;
+  --text-secondary: #555555;
+  --text-tertiary: #888888;
   
-  --border-color: #e0e0e0;
-  --sidebar-bg: #f9f9f9;
+  --border-color: #d2d2d7;
+  --separator: rgba(0, 0, 0, 0.05);
   
-  --accent-primary: #1db954;
-  --accent-secondary: #1ed760;
+  --accent-primary: #ff9500;
+  --accent-secondary: #ffb700;
+  --accent-hover: #ff8c00;
+  --accent-light: #fff5e6;
   
   --card-bg: #ffffff;
-  --card-hover: #f5f5f5;
+  --card-border: rgba(0, 0, 0, 0.05);
+  --card-hover: #f5f5f7;
   
-  --shadow: rgba(0, 0, 0, 0.1);
+  --success: #34c759;
+  --warning: #ff9500;
+  --error: #ff3b30;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.16);
 }
 
 /* HIGH CONTRAST MODE */
 html[data-theme="high-contrast"] {
   --bg-primary: #000000;
-  --bg-secondary: #111111;
-  --bg-tertiary: #222222;
-  --bg-elevated: #333333;
+  --bg-secondary: #0d0d0d;
+  --bg-tertiary: #1a1a1a;
+  --bg-elevated: #262626;
+  --bg-hover: #333333;
   
   --text-primary: #ffffff;
-  --text-secondary: #cccccc;
-  --text-tertiary: #aaaaaa;
+  --text-secondary: #e0e0e0;
+  --text-tertiary: #b0b0b0;
   
-  --accent-primary: #00ff00;
-  --accent-secondary: #00ff00;
-  --accent-hover: #00dd00;
+  --accent-primary: #ffff00;
+  --accent-secondary: #ffff00;
+  --accent-hover: #e6e600;
   
   --card-bg: #1a1a1a;
+  --card-border: rgba(255, 255, 255, 0.2);
   --card-hover: #2a2a2a;
 }

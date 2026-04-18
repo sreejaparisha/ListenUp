@@ -3,51 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sign up for your free ListenUp account" />
-  <meta name="theme-color" content="#121212" />
+  <meta name="description" content="Sign up for ListenUp" />
+  <meta name="theme-color" content="#0a0a0a" />
   
   <title>Sign Up - ListenUp</title>
 
-  <!-- CSS: Consolidated & Optimized -->
   <link rel="stylesheet" href="../assets/css/variables.css" />
   <link rel="stylesheet" href="../assets/css/base.css" />
   <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
   <link rel="stylesheet" href="../assets/css/auth.css" />
 </head>
 
 <body data-page="signup">
-  <div class="auth-container">
-    <div class="auth-card">
-      <div class="auth-header">
-        <div class="auth-logo">🎧</div>
-        <h1 class="auth-title">Sign up to start listening</h1>
-        <p class="auth-subtitle">Create your free account today</p>
-      </div>
+  <!-- NAVIGATION BAR -->
+  <nav class="top-bar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <span>🎧</span>
+        <span>ListenUp</span>
+      </a>
+    </div>
 
-      <form class="signup-form" id="signupForm">
-        <div class="form-group">
-          <label for="email" class="form-label">Email Address</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email"
-            class="form-input" 
-            placeholder="name@domain.com"
-            required 
-            autocomplete="email"
-          />
-          <p class="form-helper" id="emailHelper"></p>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-layout">
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1>Create Your Account</h1>
+          <p>Start listening to millions of songs for free</p>
         </div>
 
-        <div class="form-group">
-          <label for="fullname" class="form-label">Full Name</label>
-          <input 
-            type="text" 
-            id="fullname" 
-            name="fullname"
-            class="form-input" 
-            placeholder="Your full name"
-            required
+        <form class="auth-form" id="signup-form">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Your name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" required />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required />
+          </div>
+
+          <div class="form-group checkbox">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">I agree to the Terms of Service</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: var(--font-size-md); padding: 12px 24px;">Sign Up</button>
+        </form>
+
+        <div class="auth-divider">or sign up with</div>
+
+        <div class="social-buttons">
+          <button class="social-btn google" type="button">Google</button>
+          <button class="social-btn apple" type="button">Apple</button>
+        </div>
+
+        <div class="auth-footer">
+          <p>Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/utils.js"></script>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeManager = new ThemeManager();
+    
+    themeToggle.addEventListener('click', () => {
+      const themes = ['dark', 'light', 'high-contrast'];
+      const current = themeManager.getTheme();
+      const next = themes[(themes.indexOf(current) + 1) % themes.length];
+      themeManager.setTheme(next);
+      updateThemeToggleIcon();
+    });
+
+    function updateThemeToggleIcon() {
+      const current = themeManager.getTheme();
+      const icons = { dark: '🌙', light: '☀️', 'high-contrast': '♿' };
+      themeToggle.textContent = icons[current] || '🌙';
+    }
+
+    updateThemeToggleIcon();
+
+    document.getElementById('signup-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      
+      if (password !== confirmPassword) {
+        ListenUpUtils.notify('❌ Passwords do not match', 'error');
+        return;
+      }
+
+      const email = document.getElementById('email').value;
+      ListenUpUtils.notify('✅ Account created! Logging in...', 'success');
+      ListenUpUtils.setStorage('currentUser', { email, loginTime: new Date() });
+      
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
           />
           <p class="form-helper" id="fullnameHelper"></p>
         </div>

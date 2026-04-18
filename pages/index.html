@@ -4,21 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ListenUp - Your ultimate music streaming platform" />
-  <meta name="theme-color" content="#121212" />
+  <meta name="theme-color" content="#0a0a0a" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   
   <title>ListenUp - Music Streaming Platform</title>
 
-  <!-- CSS: Consolidated & Optimized -->
-  <link rel="stylesheet" href="assets/css/variables.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
+  <!-- CSS: Modern Apple-Inspired Design -->
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/hero.css" />
 </head>
 
 <body data-page="home">
-  <!-- TOP NAVIGATION BAR -->
+  <!-- NAVIGATION BAR -->
   <nav class="top-bar">
     <div class="nav-left">
       <a href="index.html" class="logo">
@@ -26,28 +27,224 @@
         <span>ListenUp</span>
       </a>
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" style="cursor: pointer; color: var(--text-secondary);">
-        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-      </svg>
-
       <div class="search-bar">
         <span class="icon">🔍</span>
-        <input type="text" placeholder="What do you want to play?" aria-label="Search songs">
-        <span class="icon">🗃</span>
+        <input type="text" placeholder="Search songs, artists..." aria-label="Search songs">
       </div>
     </div>
 
     <div class="nav-right">
       <div class="nav-links">
-        <a href="pages/premium.html">Premium</a>
+        <a href="premium.html">Premium</a>
         <a href="#support">Support</a>
-        <a href="#download">Download</a>
         <div class="divider"></div>
-        <span>⬇ Install App</span>
-        <a href="pages/signup.html">Sign Up</a>
       </div>
 
       <div class="auth-buttons">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
+        <a href="login.html" class="login-btn">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-layout">
+    <div class="content-wrapper">
+      
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>Your Music, Your Way</h1>
+          <p>Stream millions of songs, create playlists, and discover new artists. All in one place.</p>
+          <div class="hero-cta">
+            <a href="signup.html" class="btn btn-primary">Get Started Free</a>
+            <a href="premium.html" class="btn btn-secondary">View Premium Plans</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED SECTION -->
+      <section class="featured-section">
+        <div class="section-heading">
+          <h2>Discover What's New</h2>
+          <p>Curated picks from our music experts</p>
+        </div>
+        
+        <div class="featured-grid">
+          <div class="featured-card">
+            <div class="featured-card-icon">🎵</div>
+            <h3>Trending Now</h3>
+            <p>Explore the most popular songs and artists trending this week</p>
+          </div>
+          
+          <div class="featured-card">
+            <div class="featured-card-icon">🎧</div>
+            <h3>Personalized Playlists</h3>
+            <p>AI-powered playlists tailored to your music taste</p>
+          </div>
+          
+          <div class="featured-card">
+            <div class="featured-card-icon">🌟</div>
+            <h3>New Releases</h3>
+            <p>Discover fresh tracks from your favorite artists</p>
+          </div>
+          
+          <div class="featured-card">
+            <div class="featured-card-icon">🎸</div>
+            <h3>Live Sessions</h3>
+            <p>Watch exclusive live performances and interviews</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRENDING SECTION -->
+      <section class="trending-section">
+        <div class="section-heading">
+          <h2>Popular This Week</h2>
+          <p>Songs everyone is listening to right now</p>
+        </div>
+
+        <div class="trending-grid">
+          <div class="trending-item">
+            <div class="trending-thumbnail">
+              <img src="https://via.placeholder.com/160" alt="Song thumbnail" />
+            </div>
+            <div class="trending-title">Midnight Dreams</div>
+            <div class="trending-artist">Luna Echo</div>
+          </div>
+
+          <div class="trending-item">
+            <div class="trending-thumbnail">
+              <img src="https://via.placeholder.com/160" alt="Song thumbnail" />
+            </div>
+            <div class="trending-title">Electric Vibes</div>
+            <div class="trending-artist">Neon Lights</div>
+          </div>
+
+          <div class="trending-item">
+            <div class="trending-thumbnail">
+              <img src="https://via.placeholder.com/160" alt="Song thumbnail" />
+            </div>
+            <div class="trending-title">Summer Breeze</div>
+            <div class="trending-artist">Coastal Wave</div>
+          </div>
+
+          <div class="trending-item">
+            <div class="trending-thumbnail">
+              <img src="https://via.placeholder.com/160" alt="Song thumbnail" />
+            </div>
+            <div class="trending-title">Night Moves</div>
+            <div class="trending-artist">Urban Rhythm</div>
+          </div>
+
+          <div class="trending-item">
+            <div class="trending-thumbnail">
+              <img src="https://via.placeholder.com/160" alt="Song thumbnail" />
+            </div>
+            <div class="trending-title">Golden Hour</div>
+            <div class="trending-artist">Sunset Stories</div>
+          </div>
+
+          <div class="trending-item">
+            <div class="trending-thumbnail">
+              <img src="https://via.placeholder.com/160" alt="Song thumbnail" />
+            </div>
+            <div class="trending-title">Cosmic Journey</div>
+            <div class="trending-artist">Star Dust</div>
+          </div>
+
+          <div class="trending-item">
+            <div class="trending-thumbnail">
+              <img src="https://via.placeholder.com/160" alt="Song thumbnail" />
+            </div>
+            <div class="trending-title">Wave Rider</div>
+            <div class="trending-artist">Ocean Current</div>
+          </div>
+
+          <div class="trending-item">
+            <div class="trending-thumbnail">
+              <img src="https://via.placeholder.com/160" alt="Song thumbnail" />
+            </div>
+            <div class="trending-title">Urban Pulse</div>
+            <div class="trending-artist">City Lights</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="featured-section">
+        <div class="cta-section">
+          <h2>Upgrade to Premium</h2>
+          <p>Unlock unlimited skips, offline listening, and ad-free music</p>
+          <a href="premium.html" class="cta-button">Learn More</a>
+        </div>
+      </section>
+
+      <!-- INFO SECTION -->
+      <section class="info-section">
+        <h3>Why Choose ListenUp?</h3>
+        <p>Experience music like never before with high-quality audio, personalized recommendations, and access to millions of songs from all your favorite artists.</p>
+        
+        <div class="featured-grid" style="margin-top: var(--spacing-2xl);">
+          <div class="featured-card">
+            <div class="featured-card-icon">♾️</div>
+            <h3>Unlimited Streaming</h3>
+            <p>Listen to millions of songs without limits</p>
+          </div>
+          <div class="featured-card">
+            <div class="featured-card-icon">🎵</div>
+            <h3>High Quality Audio</h3>
+            <p>Experience crystal-clear sound quality</p>
+          </div>
+          <div class="featured-card">
+            <div class="featured-card-icon">📱</div>
+            <h3>Works Everywhere</h3>
+            <p>Listen on any device, anywhere, anytime</p>
+          </div>
+          <div class="featured-card">
+            <div class="featured-card-icon">🤝</div>
+            <h3>Family Plans</h3>
+            <p>Share your account with up to 6 family members</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--separator); padding: var(--spacing-xl) var(--spacing-lg); text-align: center; color: var(--text-secondary);">
+    <p>&copy; 2024 ListenUp Music Streaming. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/responsive.js"></script>
+  <script src="../assets/js/utils.js"></script>
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeManager = new ThemeManager();
+    
+    themeToggle.addEventListener('click', () => {
+      const themes = ['dark', 'light', 'high-contrast'];
+      const current = themeManager.getTheme();
+      const next = themes[(themes.indexOf(current) + 1) % themes.length];
+      themeManager.setTheme(next);
+      updateThemeToggleIcon();
+    });
+
+    function updateThemeToggleIcon() {
+      const current = themeManager.getTheme();
+      const icons = { dark: '🌙', light: '☀️', 'high-contrast': '♿' };
+      themeToggle.textContent = icons[current] || '🌙';
+    }
+
+    updateThemeToggleIcon();
+  </script>
+</body>
+</html>
         <button class="login-btn" onclick="location.href='pages/login.html'">Log In</button>
       </div>
 
